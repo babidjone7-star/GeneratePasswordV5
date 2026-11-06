@@ -21,7 +21,7 @@ class Gener(QDialog):
         self.Password = random.choices(arr, k=8)
         self.RealPassword = "".join(self.Password)
         self.ui.ParoleLabel.setText(f"Твой пароль: {self.RealPassword}")
-        self.CurPass = RealPassword
+        self.CurPass = self.RealPassword
     def Copy(self):
         self.HowMuchCopy = self.HowMuchCopy + 1
         self.ui.CopyBut.setText(f"Скопировано, ты скопировал раз {self.HowMuchCopy}")
