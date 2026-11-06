@@ -18,8 +18,6 @@ class Gener(QDialog):
         self.ui.generateButton.clicked.connect(self.onClick)   
         self.ui.CopyBut.clicked.connect(self.Copy) 
     def onClick(self):
-        global Password
-        global RealPassword
         self.Password = random.choices(arr, k=8)
         self.RealPassword = "".join(self.Password)
         self.ui.ParoleLabel.setText(f"Твой пароль: {self.RealPassword}")
